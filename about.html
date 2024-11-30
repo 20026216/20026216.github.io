@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Collin Portfolio</title>
+
+    <!-- include your CSS here -->
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <script src="./assets/js/main.js" defer></script>
+
+</head>
+<body class="bg-teal-900 min-h-screen flex flex-col">
+<header class="bg-gray-700 sticky top-0 p-4 pb-5 z-10 ">
+
+    <div class="flex justify-between items-center relative z-20  ">
+        <h1 class="text-lg text-white font-bold">Collin <br> Maraan</h1>
+
+        <!-- Hamburger icon -->
+        <img
+                id="hamburger-icon"
+                class="h-10 w-10 fill-white lg:hidden cursor-pointer"
+                src="./assets/img/Hamburger.svg"
+                alt="Hamburger Menu">
+
+        <!-- Contact link for larger screens -->
+        <a class="text-lg text-white font-bold hidden lg:block" href="contact.html">Contact <br> Me =></a>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden fixed inset-0 bg-gray-700 text-white flex flex-col justify-center items-center space-y-4 z-10 lg:hidden">
+        <a href="./index.html" class="text-4xl border-b border-gray-600">Home</a>
+        <a href="./about.html" class="text-4xl border-b border-gray-600">About Me</a>
+        <a href="./resume.html" class="text-4xl border-b border-gray-600">Resume</a>
+        <a href="./projects.html" class="text-4xl border-b border-gray-600">Projects</a>
+        <a href="./sampleproject.html" class="text-4xl border-b border-gray-600">Sample Projects</a>
+        <a href="./contact.html" class="text-4xl border-b border-gray-600">Contact Me</a>
+    </nav>
+    <!-- Desktop Menu -->
+    <nav class="pt-8 hidden lg:flex justify-center">
+        <ul class="grid grid-cols-5 gap-5">
+            <li><a class="text-lg text-white border-b-4 border-b-gray-300" href="./index.html">Home</a></li>
+            <li><a class="text-lg text-white border-b-4 border-b-gray-300" href="./about.html">About Me</a></li>
+            <li><a class="text-lg text-white border-b-4 border-b-gray-300" href="./resume.html">Resume</a></li>
+            <li><a class="text-lg text-white border-b-4 border-b-gray-300" href="./projects.html">Projects</a></li>
+            <li><a class="text-lg text-white border-b-4 border-b-gray-300" href="./sampleproject.html">Sample Projects</a></li>
+
+        </ul>
+    </nav>
+</header>
+<main>
+    <article class="p-5 lg:p-15">
+        <section class="w-full flex flex-col gap-4 p-4">
+            <div class="flex justify-center items-center bg-black p-4 -m-4 mb-0">
+                <h4 class="text-teal-400 text-2xl md:text-4xl lg:text-7xl text-center font-semibold">
+                    About Me
+                </h4>
+            </div>
+
+            <div class="lg: grid lg:grid-cols-2">
+                <div class="flex justify-center bg-black p-4 -m-4 mb-0">
+                    <h4 class="text-white text-lg md:text-3xl lg:text-3xl text-center">
+                        I am a motivated student currently exploring diverse career opportunities, with a focus on the IT industry. I am adaptable and eager to gain experience across various fields. With the IT industry booming, I am hoping that I could have this experience while being parallel to my hobbies and interests, and contributing to the industry at the same time.
+                    </h4>
+                </div>
+                <div class="flex justify-center items-center bg-black p-4 -m-4 mb-0">
+                    <img class="lg:w-1/2 lg:h-1/1.5 " src="./assets/img/me_but_pic.jpg" alt="Self pic black and white">
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <div class="lg: grid lg:grid-cols-2">
+    <article class="p-5 lg:p-15">
+        <section class="w-full flex flex-col gap-4 p-4">
+            <div class="flex justify-center items-center bg-black text-gray-200 p-4 -m-4 mb-0">
+                <h4 class="text-white text-2xl md:text-4xl lg:text-7xl text-center font-semibold">
+                    Career
+                </h4>
+            </div>
+            <div class="flex justify-center bg-black text-gray-200 p-4 -m-4 mb-0">
+                <h4 class="text-white text-lg md:text-3xl lg:text-3xl text-center">
+                    Once an adaptable Enrolled Nurse, I am now expanding my horizons to the IT Industry. Allowing myself to align my interests and skill at the same time.
+                </h4>
+            </div>
+        </section>
+    </article>
+
+    <article class="p-5 lg:p-15">
+        <section class="w-full flex flex-col gap-4 p-4">
+            <div class="flex justify-center items-center bg-black text-gray-200 p-4 -m-4 mb-0">
+                <h4 class="text-white text-2xl md:text-4xl lg:text-7xl text-center font-semibold">
+                    Interests
+                </h4>
+            </div>
+            <div class="flex justify-center bg-black text-gray-200 p-4 -m-4 mb-0">
+                <h4 class="text-white text-lg md:text-3xl lg:text-3xl text-center">
+                    I’ve been interested in Web development for quite some time now. Allowing myself to branch out system design and front end has been very interesting to me. As for my hobbies, I usually play games, tinker with the steam deck/ electronics, play drums and do marathons.
+                </h4>
+            </div>
+        </section>
+    </article>
+    </div>
+
+    <article class="p-5 lg:p-15">
+        <section class="w-full flex flex-col gap-4 p-4">
+            <div class="flex justify-center items-center bg-black text-gray-200 p-4 -m-4 mb-0">
+                <h4 class="text-white text-2xl md:text-4xl lg:text-7xl text-center font-semibold">
+                    Future paths
+                </h4>
+            </div>
+
+                <div class="lg: grid lg:grid-cols-2">
+                    <div class="flex justify-center bg-black text-gray-200 p-4 -m-4 mb-0">
+                        <h4 class="text-white text-lg md:text-3xl lg:text-3xl text-center">
+                            I want to use the skills from these to enhance my hobbies as well.
+                            <ul>
+                                <li>
+                                    Game design - Knowing how to build data structures for more optimized game development.
+                                </li>
+                                <li>
+                                    Robotics/ engineering - Knowing how to interact with IoT equipment, and maybe bust out that old raspberry pi for smart home control.
+                                </li>
+                            </ul>
+                        </h4>
+                    </div>
+                    <div class="flex justify-center items-center bg-black p-4 -m-4 mb-0">
+                        <img src="./assets/img/dog-gun.jpg" alt="image of a robot dog with a gun">
+                    </div>
+
+
+
+                </div>
+        </section>
+    </article>
+
+</main>
+<footer class="mt-auto flex flex-row gap-16 p-8 pt-12 bg-gray-700 justify-between">
+    <section class="flex items-center gap-4">
+        <p class="text-white">© Copyright 2024 <br> Collin Maraan. <br> All rights reserved.</p>
+    </section>
+    <section>
+        <ul class="flex flex-row gap-3 lg:gap-20">
+            <li><a href="https://x.com/SausageSecret" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/img/X-logo.svg" alt="Site 1" class="w-10 h-10 lg:w-20 lg:h-20">
+            </a></li>
+            <li><a href="https://www.linkedin.com/in/williamhgates" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/img/linkedin-logo.png" alt="Site 1" class="w-10 h-10 lg:w-20 lg:h-20">
+            </a></li>
+            <li><a href="https://github.com/20026216" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/img/github-white-logo.svg" alt="github logo" class="w-10 h-10 lg:w-20 lg:h-20">
+            </a></li>
+        </ul>
+    </section>
+</footer>
+</body>
+</html>
