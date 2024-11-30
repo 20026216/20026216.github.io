@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Collin Portfolio</title>
+
+    <!-- include your CSS here -->
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <script src="./assets/js/main.js" defer></script>
+
+</head>
+<body class="bg-teal-900 min-h-screen flex flex-col">
+<header class="bg-gray-700 sticky top-0 p-4 pb-5 z-10 ">
+
+    <div class="flex justify-between items-center relative z-20  ">
+        <h1 class="text-lg text-white font-bold">Collin <br> Maraan</h1>
+
+        <!-- Hamburger icon -->
+        <img
+                id="hamburger-icon"
+                class="h-10 w-10 fill-white lg:hidden cursor-pointer"
+                src="./assets/img/Hamburger.svg"
+                alt="Hamburger Menu">
+
+        <!-- Contact link for larger screens -->
+        <a class="text-lg text-white font-bold hidden lg:block" href="contact.html">Contact <br> Me =></a>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden fixed inset-0 bg-gray-700 text-white flex flex-col justify-center items-center space-y-4 z-10 lg:hidden">
+        <a href="./index.html" class="text-4xl border-b border-gray-600">Home</a>
+        <a href="./about.html" class="text-4xl border-b border-gray-600">About Me</a>
+        <a href="./resume.html" class="text-4xl border-b border-gray-600">Resume</a>
+        <a href="./projects.html" class="text-4xl border-b border-gray-600">Projects</a>
+        <a href="./sampleproject.html" class="text-4xl border-b border-gray-600">Sample Projects</a>
+        <a href="./contact.html" class="text-4xl border-b border-gray-600">Contact Me</a>
+    </nav>
+    <!-- Desktop Menu -->
+    <nav class="pt-8 hidden lg:flex justify-center">
+        <ul class="grid grid-cols-5 gap-5">
+            <li><a class="text-lg text-white border-b-4 border-b-gray-300" href="./index.html">Home</a></li>
+            <li><a class="text-lg text-white border-b-4 border-b-gray-300" href="./about.html">About Me</a></li>
+            <li><a class="text-lg text-white border-b-4 border-b-gray-300" href="./resume.html">Resume</a></li>
+            <li><a class="text-lg text-white border-b-4 border-b-gray-300" href="./projects.html">Projects</a></li>
+            <li><a class="text-lg text-white border-b-4 border-b-gray-300" href="./sampleproject.html">Sample Projects</a></li>
+
+        </ul>
+    </nav>
+</header>
+<main>
+    <article class="p-5 lg:p-15">
+        <section class="w-full flex flex-col gap-4 p-4">
+            <div class="flex justify-center items-center bg-black text-gray-200 p-4 -m-4 mb-0">
+                <h4 class="text-teal-400 text-2xl md:text-4xl lg:text-7xl text-center font-semibold">
+                    CREATIVITY STARTS HERE
+                </h4>
+            </div>
+            <div class="flex justify-center bg-black text-gray-200 p-4 -m-4 mb-0">
+                <a href="./contact.html">
+                    <h4 class="text-blue-700 text-2xl md:text-3xl lg:text-6xl text-center underline">
+                        Start a request
+                    </h4>
+                </a>
+            </div>
+        </section>
+    </article>
+
+    <article class="p-5 lg:p-15">
+        <section class="w-full flex flex-col gap-4 p-4">
+            <div class="flex justify-center items-center bg-black text-gray-200 p-4 -m-4 mb-0">
+                <h4 class="text-white text-2xl md:text-4xl lg:text-7xl text-center font-semibold">
+                    A portfolio of my work.
+                </h4>
+            </div>
+            <div class="flex justify-center bg-black text-gray-200 p-4 -m-4 mb-0">
+                    <h4 class="text-white text-lg md:text-3xl lg:text-3xl text-center">
+                        Created by a student from North Metropolitan TAFE. This is to serve as a website development portfolio, and a showcase of my other works.
+                    </h4>
+            </div>
+        </section>
+    </article>
+
+    <article class="p-5 lg:p-15">
+        <section class="w-full flex flex-col gap-4 p-4">
+            <div class="flex justify-center items-center bg-black p-4 -m-4 mb-0">
+                <h4 class="text-white text-2xl md:text-4xl lg:text-7xl text-center font-semibold">
+                    A Small Sample
+                </h4>
+            </div>
+            <div class="flex flex-col gap-4 bg-black p-4 -m-4 mb-0 items-center">
+                <a href="https://dev.screencraft.net.au/~maraanjo/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/img/Webdevphase4.png" alt="Webdev example logo">
+                </a>
+                <a href="https://dev.screencraft.net.au/~maraanco/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/img/oldwebdev.png" alt="old web dev">
+                </a>
+                <a href="https://github.com/NM-TAFE/dip-programming-prj-advanced-gui-senior-developers/pull/57" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/img/Ocroo.png" alt="Ocroo project">
+                </a>
+            </div>
+        </section>
+    </article>
+
+</main>
+<footer class="mt-auto flex flex-row gap-16 p-8 pt-12 bg-gray-700 justify-between">
+    <section class="flex items-center gap-4">
+        <p class="text-white">© Copyright 2024 <br> Collin Maraan. <br> All rights reserved.</p>
+    </section>
+    <section>
+        <ul class="flex flex-row gap-3 lg:gap-20">
+            <li><a href="https://x.com/SausageSecret" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/img/X-logo.svg" alt="Site 1" class="w-10 h-10 lg:w-20 lg:h-20">
+            </a></li>
+            <li><a href="https://www.linkedin.com/in/williamhgates" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/img/linkedin-logo.png" alt="Site 1" class="w-10 h-10 lg:w-20 lg:h-20">
+            </a></li>
+            <li><a href="https://github.com/20026216" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/img/github-white-logo.svg" alt="github logo" class="w-10 h-10 lg:w-20 lg:h-20">
+            </a></li>
+        </ul>
+    </section>
+</footer>
+</body>
+</html>
