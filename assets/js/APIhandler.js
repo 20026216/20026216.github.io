@@ -57,7 +57,6 @@ function cryptoHandler (input) {
         })
         .then(function (response) {
             if (response.ok) {
-                // console.log(response);
                 return response.json();
             }
             else if (response.status === 400) {
@@ -66,7 +65,6 @@ function cryptoHandler (input) {
 
         })
         .then(function (data) {
-            console.log(data);
             let price = data.price;
             document.getElementById("text-output").innerHTML = ` ${input} = $${price}`;
 
@@ -91,7 +89,6 @@ async function isInCryptoList(input) {
         if (response.ok) {
             const data = await response.json();
             let cryptolist = data.symbols;
-            console.log(cryptolist);
             return cryptolist.includes(input); // Check if the input symbol is in the list
         } else if (response.status === 400) {
             throw new Error("Cannot Symbol to API Crypto List");
@@ -122,7 +119,6 @@ function stockHandler (input) {
             throw new Error("Cannot recognise symbol");
         })
         .then(function (data) {
-            console.log(data);
             let price = data.price;
             if (price === undefined) {
                 document.getElementById("text-output").innerHTML = "Cannot Recognise symbol";
