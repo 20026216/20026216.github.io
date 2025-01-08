@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Collin Portfolio</title>
+
+    <!-- include your CSS here -->
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <script src="./assets/js/main.js" defer></script>
+
+</head>
+<body class="bg-teal-900 min-h-screen flex flex-col">
+<header class="bg-gray-700 sticky top-0 p-4 pb-5 z-10 ">
+
+    <div class="flex justify-between items-center relative z-20  ">
+        <h1 class="text-lg text-white font-bold">Collin <br> Maraan</h1>
+
+        <!-- Hamburger icon -->
+        <img
+                id="hamburger-icon"
+                class="h-10 w-10 fill-white lg:hidden cursor-pointer"
+                src="./assets/img/Hamburger.svg"
+                alt="Hamburger Menu">
+
+        <!-- Contact link for larger screens -->
+        <a class="text-lg text-white font-bold hidden lg:block" href="contact.html">Contact <br> Me =></a>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden fixed inset-0 bg-gray-700 text-white flex flex-col justify-center items-center space-y-4 z-10 lg:hidden">
+        <a href="./index.html" class="text-4xl border-b border-gray-600">Home</a>
+        <a href="./about.html" class="text-4xl border-b border-gray-600">About Me</a>
+        <a href="./resume.html" class="text-4xl border-b border-gray-600">Resume</a>
+        <a href="./projects.html" class="text-4xl border-b border-gray-600">Projects</a>
+        <a href="./sampleproject.html" class="text-4xl border-b border-gray-600">Sample Projects</a>
+        <a href="./contact.html" class="text-4xl border-b border-gray-600">Contact Me</a>
+    </nav>
+    <!-- Desktop Menu -->
+    <nav class="pt-8 hidden lg:flex justify-center">
+        <ul class="grid grid-cols-5 gap-5">
+            <li><a class="text-lg text-white border-b-4 border-b-gray-300" href="./index.html">Home</a></li>
+            <li><a class="text-lg text-white border-b-4 border-b-gray-300" href="./about.html">About Me</a></li>
+            <li><a class="text-lg text-white border-b-4 border-b-gray-300" href="./resume.html">Resume</a></li>
+            <li><a class="text-lg text-white border-b-4 border-b-gray-300" href="./projects.html">Projects</a></li>
+            <li><a class="text-lg text-white border-b-4 border-b-gray-300" href="./sampleproject.html">Sample Projects</a></li>
+
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="bg-teal-900 py-4 px-4">
+        <h2 class="text-center text-2xl font-bold text-teal-400 mb-6">Contact Me</h2>
+        <div class="max-w-5xl mx-auto flex flex-col lg:flex-row gap-8">
+            <!-- Form -->
+            <form
+                    action="mailto:FrenetFrailMail@proton.me?subject=Comments-from-people"
+                    method="post"
+                    enctype="text/plain"
+                    class="flex-1 bg-gray-800 p-6 rounded-lg shadow-xl"
+            >
+                <fieldset class="space-y-6">
+                    <!-- First Name -->
+                    <div>
+                        <label for="fname" class="block text-sm font-semibold text-gray-300">First Name</label>
+                        <input
+                                type="text"
+                                name="First Name"
+                                id="fname"
+                                placeholder="Enter your first name"
+                                class="w-full p-3 mt-1 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                        >
+                    </div>
+                    <!-- Last Name -->
+                    <div>
+                        <label for="lname" class="block text-sm font-semibold text-gray-300">Last Name</label>
+                        <input
+                                type="text"
+                                name="Last Name"
+                                id="lname"
+                                placeholder="Enter your last name"
+                                class="w-full p-3 mt-1 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                        >
+                    </div>
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-sm font-semibold text-gray-300">Email Address</label>
+                        <input
+                                type="email"
+                                name="Email"
+                                id="email"
+                                placeholder="Enter your email address"
+                                class="w-full p-3 mt-1 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                        >
+                    </div>
+                    <!-- Message -->
+                    <div>
+                        <label for="comment" class="block text-sm font-semibold text-gray-300">Comment or Message</label>
+                        <textarea
+                                name="message"
+                                id="comment"
+                                placeholder="Enter your message here..."
+                                class="w-full p-3 mt-1 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none"
+                                rows="4"
+                        ></textarea>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="flex justify-between gap-4">
+                        <button
+                                type="reset"
+                                class="w-1/2 bg-purple-700 text-white py-3 rounded-md hover:bg-red-700 transition"
+                        >
+                            Clear
+                        </button>
+                        <button
+                                type="submit"
+                                class="w-1/2 bg-purple-700 text-white py-3 rounded-md hover:bg-teal-600 transition"
+                        >
+                            Send
+                        </button>
+                    </div>
+                </fieldset>
+                <!-- Disclaimer -->
+                <p class="mt-6 text-sm text-gray-400">
+                    <strong>Disclaimer:</strong> Your email address will only be used to reply to your query. It will not be
+                    added to a mailing list or passed on to any third party. Emails are deleted after they are replied to.
+                </p>
+            </form>
+
+            <!-- Aside -->
+            <aside class="hidden lg:block flex-1 bg-gray-800 p-6 rounded-lg shadow-xl text-white">
+                <h2 class="text-xl font-semibold text-teal-400 mb-4">Contact Details</h2>
+                <ul class="space-y-4 text-gray-300">
+                    <li>
+                        <strong>Email:</strong>
+                        <a href="mailto:FrenetFrailMail@proton.me" class="text-teal-400 hover:underline">FrenetFrailMail@proton.me</a>
+                    </li>
+                    <li>
+                        <strong>GitHub:</strong>
+                        <a href="https://github.com/20026216" target="_blank" class="text-teal-400 hover:underline">github.com/20026216</a>
+                    </li>
+                    <li>
+                        <strong>LinkedIn:</strong>
+                        <a href="https://www.linkedin.com/in/williamhgates" target="_blank" class="text-teal-400 hover:underline">linkedin.com/in/williamhgates</a>
+                    </li>
+                    <li>
+                        <strong>X:</strong>
+                        <a href="https://x.com/SausageSecret" target="_blank" class="text-teal-400 hover:underline">x.com/SausageSecret</a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </section>
+
+</main>
+<footer class="mt-auto flex flex-row gap-16 p-8 pt-12 bg-gray-700 justify-between">
+    <section class="flex items-center gap-4">
+        <p class="text-white">© Copyright 2024 <br> Collin Maraan. <br> All rights reserved.</p>
+    </section>
+    <section>
+        <ul class="flex flex-row gap-3 lg:gap-20">
+            <li><a href="https://x.com/SausageSecret" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/img/X-logo.svg" alt="Site 1" class="w-10 h-10 lg:w-20 lg:h-20">
+            </a></li>
+            <li><a href="https://www.linkedin.com/in/williamhgates" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/img/linkedin-logo.png" alt="Site 1" class="w-10 h-10 lg:w-20 lg:h-20">
+            </a></li>
+            <li><a href="https://github.com/20026216" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/img/github-white-logo.svg" alt="github logo" class="w-10 h-10 lg:w-20 lg:h-20">
+            </a></li>
+        </ul>
+    </section>
+</footer>
+</body>
+</html>
