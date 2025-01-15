@@ -82,7 +82,7 @@ function cryptoHandler (input) {
 // Function that checks whether the crypto works with the list from another api
 // (there was no catching that other error, only pain and suffering)
 async function isInCryptoList(input) {
-    const apiKey = NINJA_API_KEY;
+    const apiKey = giveKeyPlease();
     try {
         const response = await fetch(`https://api.api-ninjas.com/v1/cryptosymbols`, {
             headers: {
@@ -108,7 +108,7 @@ async function isInCryptoList(input) {
 // TODO: make a function that fetches data from stock price
 function stockHandler (input) {
     let stockInput = document.getElementById("text-input").value;
-    const apiKey = NINJA_API_KEY;
+    const apiKey = giveKeyPlease();
     fetch(`https://api.api-ninjas.com/v1/stockprice?ticker=${input}`,
         {
             headers: {
