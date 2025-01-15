@@ -1,6 +1,8 @@
 //TODO: Create a hidden API KEY process
 require('dotenv').config();
-const NINJA_API_KEY = process.env.NINJA_API_KEY;
+function giveKeyPlease() {
+    return process.env.NINJA_API_KEY;
+}
 
 // Allows the form to not reload the page on submission
 document.addEventListener("DOMContentLoaded", function() {
@@ -49,7 +51,7 @@ async function inputHandler(event) {
 
 // TODO: make a function that fetches data from crypto price
 function cryptoHandler (input) {
-    const apiKey = NINJA_API_KEY;
+    const apiKey = giveKeyPlease();
     fetch(`https://api.api-ninjas.com/v1/cryptoprice?symbol=${input}`,
         {
             headers: {
