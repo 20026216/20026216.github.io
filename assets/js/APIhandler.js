@@ -1,5 +1,4 @@
 //TODO: Create a hidden API KEY process
-require('dotenv').config();
 function giveKeyPlease() {
     return process.env.NINJA_API_KEY;
 }
