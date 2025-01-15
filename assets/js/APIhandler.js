@@ -1,4 +1,4 @@
-//TODO: Create a hidden API KEY process
+//TODO: Create a hidden API KEY process wtf is happening
 function giveKeyPlease() {
     return process.env.NINJA_API_KEY;
 }
