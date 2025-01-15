@@ -1,5 +1,6 @@
 //TODO: Create a hidden API KEY process
-import NINJA_API_KEY from "./sensitive.js";
+require('dotenv').config();
+const NINJA_API_KEY = process.env.NINJA_API_KEY;
 
 // Allows the form to not reload the page on submission
 document.addEventListener("DOMContentLoaded", function() {
