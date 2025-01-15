@@ -1,8 +1,4 @@
-//TODO: Create a hidden API KEY process
-require('dotenv').config();
-function giveKeyPlease() {
-    return process.env.NINJA_API_KEY;
-}
+
 
 // Allows the form to not reload the page on submission
 document.addEventListener("DOMContentLoaded", function() {
@@ -50,53 +46,32 @@ async function inputHandler(event) {
 
 
 // TODO: make a function that fetches data from crypto price
-function cryptoHandler (input) {
-    const apiKey = giveKeyPlease();
-    fetch(`https://api.api-ninjas.com/v1/cryptoprice?symbol=${input}`,
-        {
-            headers: {
-                "Content-Type": "application/json",
-                Accept: 'application/json',
-                "X-Api-Key": apiKey,
-            }
-        })
-        .then(function (response) {
-            if (response.ok) {
-                return response.json();
-            }
-            else if (response.status === 400) {
-                throw new Error("Cannot Recognise symbol");
-            }
-
-        })
-        .then(function (data) {
-            let price = data.price;
-            document.getElementById("text-output").innerHTML = ` ${input} = $${price}`;
-
-        })
-        .catch(function (error) {
-            document.getElementById("text-output").innerHTML = error.message;
-        })
+async function cryptoHandler(input) {
+    try {
+        const response = await fetch(`/crypto/${input}`);
+        const data = await response.json();
+        if (data.price) {
+            document.getElementById('text-output').innerHTML = `${input} = $${data.price}`;
+        } else {
+            throw new Error('Cannot recognize symbol');
+        }
+    } catch (err) {
+        document.getElementById('text-output').innerHTML = err.message;
+    }
 }
+
 
 // Function that checks whether the crypto works with the list from another api
 // (there was no catching that other error, only pain and suffering)
 async function isInCryptoList(input) {
-    const apiKey = giveKeyPlease();
     try {
-        const response = await fetch(`https://api.api-ninjas.com/v1/cryptosymbols`, {
-            headers: {
-                "Content-Type": "application/json",
-                Accept: 'application/json',
-                "X-Api-Key": apiKey,
-            }
-        });
+        const response = await fetch(`http://localhost:3000/crypto/symbols`);
+        console.log(response);
         if (response.ok) {
             const data = await response.json();
-            let cryptolist = data.symbols;
-            return cryptolist.includes(input); // Check if the input symbol is in the list
-        } else if (response.status === 400) {
-            throw new Error("Cannot Symbol to API Crypto List");
+            return data.symbols.includes(input); // Check if the input symbol is in the list
+        } else {
+            throw new Error("Cannot fetch crypto symbols");
         }
     } catch (error) {
         document.getElementById("text-output").innerHTML = error.message;
@@ -106,38 +81,20 @@ async function isInCryptoList(input) {
 
 
 // TODO: make a function that fetches data from stock price
-function stockHandler (input) {
-    let stockInput = document.getElementById("text-input").value;
-    const apiKey = giveKeyPlease();
-    fetch(`https://api.api-ninjas.com/v1/stockprice?ticker=${input}`,
-        {
-            headers: {
-                "Content-Type": "application/json",
-                Accept: 'application/json',
-                "X-Api-Key": apiKey,
-            }
-        })
-        .then(function (response) {
-            if (response.ok) {
-                return response.json();
-            }
-            throw new Error("Cannot recognise symbol");
-        })
-        .then(function (data) {
-            let price = data.price;
-            if (price === undefined) {
-                document.getElementById("text-output").innerHTML = "Cannot Recognise symbol";
-            }
-            else
-            {
-                document.getElementById("text-output").innerHTML = ` ${stockInput} =  $${price}`;
-            }
-
-        })
-        .catch(function (error) {
-            document.getElementById("text-output").innerHTML = error.message;
-        })
+async function stockHandler(input) {
+    try {
+        const response = await fetch(`/stock/${input}`);
+        const data = await response.json();
+        if (data.price) {
+            document.getElementById("text-output").innerHTML = `${input} = $${data.price}`;
+        } else {
+            throw new Error('Cannot recognize symbol');
+        }
+    } catch (err) {
+        document.getElementById("text-output").innerHTML = err.message;
+    }
 }
+
 
 function InputCheck (input) {
     const regex = /^[A-Z0-9.]+$/;
