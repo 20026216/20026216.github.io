@@ -1,7 +1,7 @@
 //TODO: Create a hidden API KEY process wtf is happening
-function giveKeyPlease() {
-    return process.env.NINJA_API_KEY;
-}
+// function giveKeyPlease() {
+//     return process.env.NINJA_API_KEY;
+// }
 
 // Allows the form to not reload the page on submission
 document.addEventListener("DOMContentLoaded", function() {
