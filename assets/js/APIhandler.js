@@ -50,7 +50,7 @@ async function inputHandler(event) {
 
 // TODO: make a function that fetches data from crypto price
 function cryptoHandler (input) {
-    const apiKey = giveKeyPlease();
+    const apiKey = "PMwI8DmXX8YYMt51lA5oZg==08TeCoPPFxfMmJdV";
     fetch(`https://api.api-ninjas.com/v1/cryptoprice?symbol=${input}`,
         {
             headers: {
@@ -81,7 +81,7 @@ function cryptoHandler (input) {
 // Function that checks whether the crypto works with the list from another api
 // (there was no catching that other error, only pain and suffering)
 async function isInCryptoList(input) {
-    const apiKey = giveKeyPlease();
+    const apiKey = "PMwI8DmXX8YYMt51lA5oZg==08TeCoPPFxfMmJdV";
     try {
         const response = await fetch(`https://api.api-ninjas.com/v1/cryptosymbols`, {
             headers: {
@@ -107,7 +107,7 @@ async function isInCryptoList(input) {
 // TODO: make a function that fetches data from stock price
 function stockHandler (input) {
     let stockInput = document.getElementById("text-input").value;
-    const apiKey = giveKeyPlease();
+    const apiKey = "PMwI8DmXX8YYMt51lA5oZg==08TeCoPPFxfMmJdV";
     fetch(`https://api.api-ninjas.com/v1/stockprice?ticker=${input}`,
         {
             headers: {
